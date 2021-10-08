@@ -1,0 +1,329 @@
+html, body{
+    /* background: rgb(51,232,172);
+    background: linear-gradient(90deg, rgba(51,232,172,1) 21%, rgba(0,0,0,1) 95%); */
+    background-image: url("cool-background.png");
+    
+    background-size:cover; 	/* 让背景图基于容器大小伸缩 */
+    background-attachment:fixed;
+    /* background-size: 100% 100%; */
+}
+
+.tou {
+    display: inline-block;
+    position: absolute;top: 20px;left: -180px;
+    width: 1100px;
+    height: 450px;
+    /* background-image: url(半透明框1.rain.png); */
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: 80%;
+
+}
+.tou2 {
+    display: inline-block;
+    position: absolute;left: 600px;top: 160px;
+    width: 420px;
+    height: 395px;
+    background-image: url(半透明框2.png);
+    background: position 0px;
+    background-repeat: no-repeat;
+    background-size: 50%;
+}
+
+#high{
+    position: absolute;left: 540px;top: 270px;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+}
+#low{
+    position: absolute;left: 540px;top: 290px;
+    color: rgb(255, 255, 255);
+    font-size: 15px;
+
+
+}
+#date{
+    position: absolute;left: 665px;top: 215px;
+    color: rgb(255, 255, 255);
+
+}
+#ganmao{
+    position: absolute;left: 500px;top: 400px;
+    color: rgb(255, 255, 255);
+
+
+}
+#wendu{
+    position: absolute;left: 540px;top: 200px;
+    color: rgb(255, 255, 255);
+    font-size: 50px;
+
+}
+#cityName{
+    position: absolute;left: 540px;top: 145px;
+    color: rgb(255, 255, 255);
+    font-size: 36px;
+
+}
+
+.sunny{
+    width: 270px;
+    height: 260px;
+    background-image: url(sun.png);
+    position: absolute;left: 220px;top: 120px;
+    background-repeat: no-repeat;
+    background-size: 50%;
+
+}
+.rainy{
+    width: 270px;
+    height: 260px;
+    background-image: url(rain.png);
+    background-repeat: no-repeat;
+    background-size: 50%;
+
+}
+.snowy{
+    width: 270px;
+    height: 260px;
+    background-image: url(snow.png);
+    background-size: 50%;
+    background-repeat: no-repeat;
+
+}
+.cloudy{
+    width: 270px;
+    height: 260px;
+    background-image: url(cloud.png);
+    background-repeat: no-repeat;
+    background-size: 50%;
+
+}
+.stormy{
+    width: 270px;
+    height: 260px;
+    background-image: url(shower.png);
+    background-repeat: no-repeat;
+    background-size: 50%;
+
+}
+#fengx{
+    position: absolute;left: 55px;top:40px;
+    text-align: center;
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+}
+#fengli{
+    position: absolute;left: 82px;top:140px;
+    text-align: center;
+    font-size: 22px;
+    color: rgb(255, 255, 255);
+}
+#first{
+    position: absolute;top:460px;left: 210px;
+    width: 200px;
+}
+#second{
+    position: absolute;top:460px;left: 450px;
+    width: 200px;
+
+}
+#third{
+    position: absolute;top:460px;left: 690px;
+    width: 200px;
+}
+#forth{
+    position: absolute;top:460px;left: 930px;
+    width: 200px;
+}
+/* 今天的天气 */
+
+.sunny1{
+    width: 270px;
+    height: 260px;
+    background-image: url(sun.png);
+    position: absolute;left: 250px;top: 120px;
+    background-repeat: no-repeat;
+
+}
+.rainy1{
+    width: 270px;
+    height: 260px;
+    background-image: url(rain.png);
+    position: absolute;left: 250px;top: 120px;
+    background-repeat: no-repeat;
+
+}
+.snowy1{
+    width: 270px;
+    height: 260px;
+    background-image: url(snow.png);
+    position: absolute;left: 250px;top: 120px;
+    background-repeat: no-repeat;
+
+}
+.cloudy1{
+    width: 270px;
+    height: 260px;
+    background-image: url(cloud.png);
+    position: absolute;left: 250px;top: 120px;
+    background-repeat: no-repeat;
+
+}
+.stormy1{
+    width: 270px;
+    height: 260px;
+    background-image: url(shower.png);
+    position: absolute;left: 250px;top: 120px;
+    background-repeat: no-repeat;
+
+}
+/* #icon{
+    width: 400px;
+    height: 400px;
+} */
+#svgDiv1{
+    position: absolute;left: 240px;top: 480px;
+}
+#svgDiv2{
+    position: absolute;left: 480px;top: 480px;
+}
+#svgDiv3{
+    position: absolute;left: 720px;top: 480px;
+}
+#svgDiv4{
+    position: absolute;left: 960px;top: 480px;
+}
+#content1{
+    width: 100px;
+    height: 100px;
+    font-size: 23px;
+    color: rgb(255, 255, 255);
+    position: absolute;left: 270px;top: 610px;
+}
+#content2{
+    width: 100px;
+    height: 100px;
+    font-size: 23px;
+    color: rgb(255, 255, 255);
+    position: absolute;left: 510px;top: 610px;
+}
+#content3{
+    width: 100px;
+    height: 100px;
+    font-size: 23px;
+    color: rgb(255, 255, 255);
+    position: absolute;left: 750px;top: 610px;
+}
+#content4{
+    width: 100px;
+    height: 100px;
+    font-size: 23px;
+    color: rgb(255, 255, 255);
+    position: absolute;left: 990px;top: 610px;
+}
+#high1{
+    font-size: 17px;
+    color: rgb(255, 255, 255);
+    position: absolute;left: 260px;top: 670px;
+}
+#high2{
+    font-size: 17px;
+    color: rgb(255, 255, 255);
+    position: absolute;left: 500px;top: 670px;
+}
+#high3{
+    width: 100px;
+    height: 100px;
+    font-size: 17px;
+    color: rgb(255, 255, 255);
+    position: absolute;left: 740px;top: 670px;
+}
+#high4{
+    width: 100px;
+    height: 100px;
+    font-size: 17px;
+    color: rgb(255, 255, 255);
+    position: absolute;left: 980px;top: 670px;
+}
+#low1{
+    font-size: 17px;
+    color: rgb(255, 255, 255);
+    position: absolute;left: 260px;top: 700px;
+}
+#low2{
+    font-size: 17px;
+    color: rgb(255, 255, 255);
+    position: absolute;left: 500px;top: 700px;
+}
+#low3{
+    font-size: 17px;
+    color: rgb(255, 255, 255);
+    position: absolute;left: 740px;top: 700px;
+}
+#low4{
+    width: 100px;
+    height: 100px;
+    font-size: 17px;
+    color: rgb(255, 255, 255);
+    position: absolute;left: 980px;top: 700px;
+}
+#sweather{
+    width: 100px;
+    height: 100px;
+    color: rgb(255, 255, 255);
+}
+#container{
+    position: absolute;left: 1150px;top: 120px;
+    border-radius: 10px;
+}
+.rain{
+    display: inline-block;
+    position: absolute;top: 20px;left: -180px;
+    width: 1100px;
+    height: 450px;
+    background-image: url(半透明框1.rain.png);
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: 80%;
+}
+.sun{
+    display: inline-block;
+    position: absolute;top: 20px;left: -180px;
+    width: 1100px;
+    height: 450px;
+    background-image: url(半透明框1.sun.png);
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: 80%;
+}
+.storm{
+    display: inline-block;
+    position: absolute;top: 20px;left: -180px;
+    width: 1100px;
+    height: 450px;
+    background-image: url(半透明框1.storm.png);
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: 80%;
+}
+.cloud{
+    display: inline-block;
+    position: absolute;top: 20px;left: -180px;
+    width: 1100px;
+    height: 450px;
+    background-image: url(半透明框1.cloud.png);
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: 80%;
+}
+.snow{
+    display: inline-block;
+    position: absolute;top: 20px;left: -180px;
+    width: 1100px;
+    height: 450px;
+    background-image: url(半透明框1.snow.png);
+    background-position: right bottom;
+    background-repeat: no-repeat;
+    background-size: 80%;
+}

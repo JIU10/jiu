@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="zh-CN">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="Chrome">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>weather</title>
+    <script src="https://cdn.bootcdn.net/ajax/libs/axios/0.21.1/axios.js"></script>
+    <script type="text/javascript" src="后台文件.js"></script>
+    <script src="http://ip.ws.126.net/ipquery"></script>
+    <script type="text/javascript">
+        window.onload = function () {
+            axiosURL(lc);
+        }
+    </script>
+
+    <!-- <script src="https://unpkg.com/axios/dist/axios.min.js"></script> -->
+    <link rel="stylesheet" href="样式.css">
+
+</head>
+
+<body>
+    <div id="weatherbackground">
+
+        <span class="tou" id="tou1">
+            <div style="width:500px;height:600px;border:#ccc solid 1px;font-size:12px" id="container"></div>
+            <img src="后几天.png" id="first">
+            <img src="后几天.png" id="second">
+            <img src="后几天.png" id="third">
+            <img src="后几天.png" id="forth">
+            <!-- <img src="sun.png" style="position: absolute;left: 175px;top: 120px;"> -->
+            <!-- 更改天气图标 -->
+            <div id="svgDiv1" class="1"></div>
+            <div id="svgDiv2"></div>
+            <div id="svgDiv3"></div>
+            <div id="svgDiv4"></div>
+            <div id="icon"></div>
+            <div id="content1"></div>
+            <div id="content2"></div>
+            <div id="content3"></div>
+            <div id="content4"></div>
+            <div id="high1"></div>
+            <div id="high2"></div>
+            <div id="high3"></div>
+            <div id="high4"></div>
+            <div id="low1"></div>
+            <div id="low2"></div>
+            <div id="low3"></div>
+            <div id="low4"></div>
+
+            <section>
+                <div id="sweather"></div>
+                <div id="wendu"></div>
+                <div id="time"></div>
+                <div id="cityName"></div>
+                <div id="ganmao"></div>
+                <div id="high"></div>
+                <div id="low"></div>
+                <div id="date"></div>
+
+            </section>
+        </span>
+        <span class="tou2">
+            <section>
+                <div id="fengx"></div>
+                <div id="fengli"></div>
+
+            </section>
+
+        </span>
+    </div>
+
+</body>
+<script src="https://webapi.amap.com/maps?v=1.4.15&key=4507b46bb5ffe13d0a822b3cb3abc967"></script>
+<script type="text/javascript">
+    var map = new AMap.Map('container', {
+        resizeEnable: true
+    });
+    AMap.plugin('AMap.Geolocation', function () {
+        var geolocation = new AMap.Geolocation({
+            enableHighAccuracy: true,//是否使用高精度定位，默认:true
+            timeout: 10000,          //超过10秒后停止定位，默认：5s
+            buttonPosition: 'RB',    //定位按钮的停靠位置
+            buttonOffset: new AMap.Pixel(10, 20),//定位按钮与设置的停靠位置的偏移量，默认：Pixel(10, 20)
+            zoomToAccuracy: true,   //定位成功后是否自动调整地图视野到定位点
+
+        });
+        map.addControl(geolocation);
+        geolocation.getCurrentPosition(function (status, result) {
+            if (status == 'complete') {
+                onComplete(result)
+            } else {
+                onError(result)
+            }
+        });
+    });
+    //解析定位结果
+    function onComplete(data) {
+        document.getElementById('status').innerHTML = '定位成功'
+        var str = [];
+        str.push('定位结果：' + data.position);
+        str.push('定位类别：' + data.location_type);
+        if (data.accuracy) {
+            str.push('精度：' + data.accuracy + ' 米');
+        }//如为IP精确定位结果则没有精度信息
+        str.push('是否经过偏移：' + (data.isConverted ? '是' : '否'));
+        document.getElementById('result').innerHTML = str.join('<br>');
+    }
+    //解析定位错误信息
+    function onError(data) {
+        document.getElementById('status').innerHTML = '定位失败'
+        document.getElementById('result').innerHTML = '失败原因排查信息:' + data.message;
+    }
+</script>
+
+</html>
